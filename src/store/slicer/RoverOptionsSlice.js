@@ -14,6 +14,7 @@ export const fetchRoverOptions = createAsyncThunk(
         },
       }
     )
+
     return response.data.rovers.map((rover) => rover.name)
     
   }
@@ -23,7 +24,7 @@ export const fetchRoverOptions = createAsyncThunk(
 export const RoverOptionsSlice = createSlice({
   name: 'RoverOptions',
   initialState: {
-    roverOptions: ['Curiosity'],
+    roverOptions: ['Curiosity','Spirit','Opportunity','Perseverance'],
     status: 'idle',
     error: null,
   },

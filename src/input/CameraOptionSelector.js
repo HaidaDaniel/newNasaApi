@@ -4,12 +4,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { cameraStateChange } from '../store/slicer/InputStateSlice'
 
 export default function CameraOptionSelector() {
-  const all = 'AllCameras'
+  
   const dispatch = useDispatch()
   const roverName = useSelector((state) => state.InputState.rover)
   const selectedSol = useSelector((state) => state.InputState.sol)
   const data = useSelector((state) => state.roverData)
-  let cameraOptions = data[roverName]?.photos[selectedSol].cameras
+  let cameraOptions = data[roverName]?.photos[selectedSol]?.cameras
   const selectedCamera = useSelector((state) => state.InputState.rover.camera)
   
   
@@ -24,7 +24,9 @@ export default function CameraOptionSelector() {
         id='camera-select'
         value={selectedCamera}
         onChange={handleCameraChange}>
-        {data ?( <option value={''}> {all}</option>, 
+          
+          {data &&(<option value={''}> AllCameras</option>)}
+        {data ?(  
           cameraOptions?.map((cameraName) => (
           <option key={cameraName} value={cameraName}>
             {cameraName}

@@ -1,62 +1,91 @@
 /** @format */
 
-import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
-
-
-
+import { useDispatch, useSelector } from 'react-redux'
+import { pageStateIncrement, pageStateRefresh } from './store/slicer/InputStateSlice'
+import axios from 'axios'
+import MarsPhoto from './MarsPhoto'
+import'./MarsPhotos.css'
 
 const apiKey = 'DBr1rIGm8dj1LupgZNAPJbMN3Vw3acQ7q2SdKruY'
 
 function MarsPhotos() {
+  const dispatch = useDispatch()
+
   let rover = useSelector((state) => state.InputState.rover)
   let sol = useSelector((state) => state.InputState.sol)
   let camera = useSelector((state) => state.InputState.camera)
-  // const [rover, setRover] = useState('Curiocity')
-  // const [sol, setSol] = useState('')
-  // const [camera, setCamera] = useState('')
-  const [photos, setPhotos] = useState([])
+  let page = useSelector((state) => state.InputState.page)
 
-  // useEffect(() => {
-  //   if (rover && sol) {
-  //     axios(
-  //       `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${apiKey}`
-  //     )
-  //       .then((response) => {
-  //         if (response.data.photos.length === 0) {
-  //           alert(
-  //             `No photos available for sol ${sol}. Please choose another sol.`
-  //           )
-  //           setCamera('')
-  //           setCameraOptions([all])
-  //         } else {
-  //           const cameraNames = [
-  //             ...new Set(
-  //               response.data.photos.map((photo) => photo.camera.name)
-  //             ),
-  //           ]
+const [allphotos, setAllphotos] = useState(false)
+const [photos, setPhotos] = useState([])
+const [fetching,setFetching] = useState(false)
+let cam
+if (camera === '') {
+  cam = ''
+} else {
+  cam = `&camera=${camera}`
+}
 
-  //           setCameraOptions(cameraNames)
-  //           setCamera('')
-  //         }
-  //       })
+let fetchUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}${cam}&page=${page}&api_key=${apiKey}`
 
-  //       .catch((error) => console.error(error))
-  //   }
-  // }, [rover, sol])
+ 
+    console.log(photos)
+
+  const scrollHandler =(e)=>{
+    if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight)<100){
+      setFetching(true)
+      
+      console.log('scroll')
+    }
+  }
+  
+  
+  useEffect(()=>{
+    document.addEventListener('scroll',scrollHandler)
+    return function(){
+      document.removeEventListener('scroll',scrollHandler)
+    }
+    },[])
+    
+
+    useEffect(()=>{
+      if (fetching&!allphotos){
+        dispatch(pageStateIncrement())
+        console.log('pageFetch',fetchUrl)
+        axios(fetchUrl)
+          .then((response) => {
+            if (response.data.photos.length === 0) {
+              setAllphotos(true)
+              console.log(
+                `No photos available for this page. Please choose another camera or sol.`
+              )
+              
+            }
+            if(response.data.photos.length<25){
+              setAllphotos(true)
+              setPhotos((prevPhotos) => [...prevPhotos, ...response.data.photos])
+            }
+            
+            else {
+              setPhotos((prevPhotos) => [...prevPhotos, ...response.data.photos])
+              console.log(response)
+              setFetching(false)
+            }
+          })
+          .catch((error) => console.error(error))
+      }
+    },[fetching])
+
 
   useEffect(() => {
-    let cam
-    if (camera === '') {
-      cam = ''
-    } else {
-      cam = `&camera=${camera}`
-    }
-
-    let fetchUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}${cam}&page=1&api_key=${apiKey}`
-
-    if (rover && sol) {
+   
+   dispatch(pageStateRefresh())
+   setFetching(false)
+    setAllphotos(false)
+    setPhotos([])
+    console.log('usualFetch',fetchUrl)
+    console.log(rover,'sol=', sol,'camera=', camera,'page=',page)
       axios(fetchUrl)
         .then((response) => {
           if (response.data.photos.length === 0) {
@@ -64,30 +93,29 @@ function MarsPhotos() {
               `No photos available for sol ${sol} and(or) camera ${camera}. Please choose another camera or sol.`
             )
             setPhotos([])
-          } else {
+            setAllphotos(false)
+          } 
+          if(response.data.photos.length<25){
+            setAllphotos(true)
+            setFetching(false)
             setPhotos(response.data.photos)
-
-            // let cameraCashedNames = roverdata
-            //   .find((name) => name === rover)
-            //   .photos.find((sol) => sol === sol)
-            //   .cameras.map((cameraname) => cameraname)
-            // console.log(cameraCashedNames)
+            
+          }
+          else {
+            setPhotos(response.data.photos)
+            
           }
         })
         .catch((error) => console.error(error))
-    }
+    
 
-    console.log(rover, sol, camera)
+    
   }, [rover, sol, camera])
-
+console.log(allphotos,fetching)
   return (
     <div className='photo-container'>
-      {photos.map((photo) => (
-        <img
-          key={photo.id}
-          src={photo.img_src}
-          alt={`Mars Rover ${rover} - ${photo.camera.name}`}
-        />
+      {photos?.map((photo ,index) => (
+        <MarsPhoto key={index} photo={photo} />
       ))}
     </div>
   )

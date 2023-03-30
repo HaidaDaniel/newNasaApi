@@ -23,8 +23,8 @@ const RoverOptionsSelector = () => {
   const selectedRover = useSelector(state => state.InputState.rover)
 
 
-  const data = useSelector(state => state);
-  console.log(data)
+  
+  
 
      
     

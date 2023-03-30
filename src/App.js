@@ -1,20 +1,17 @@
 /** @format */
 
-import React from 'react'
+import React  from 'react'
+import './App.css'
 
 import MarsPhotos from './MarsPhotos'
-import RoverOptionSelector from './input/RoverOptionSelector'
-import SolOptionSelector from './input/SolOptionSelector'
-import CameraOptionSelector from './input/CameraOptionSelector'
+import InputHeader from './InputHeader'
 
 
 
 function App() {
   return (
     <div className='App'>
-      <RoverOptionSelector />
-      <SolOptionSelector />
-      <CameraOptionSelector />
+      <InputHeader/>
       <MarsPhotos />
     </div>
   )
