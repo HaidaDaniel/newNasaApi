@@ -1,0 +1,20 @@
+/** @format */
+
+.button {
+  width: 153px;
+height: 46px;
+left: 140px;
+top: 785px;
+  cursor: pointer;
+  background-color: #E56444;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  font-family: 'Arimo';
+font-style: normal;
+font-weight: 600;
+}
+.button:hover {
+  background-color: #FCB77C;
+}

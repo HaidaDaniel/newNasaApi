@@ -1,19 +1,32 @@
 /** @format */
-
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import React  from 'react'
 import './App.css'
+import WelcomePage from './WelcomePage'
+import GalleryPage from './GalleryPage'
+import './fonts.css';
 
-import MarsPhotos from './MarsPhotos'
-import InputHeader from './InputHeader'
 
 
 
 function App() {
   return (
+    <BrowserRouter>
+
     <div className='App'>
-      <InputHeader/>
-      <MarsPhotos />
+
+    <Routes>
+
+     <Route exact path="/" element={<WelcomePage/>} />
+     <Route path="/gallery" element={<GalleryPage/>} />
+
+    </Routes>
+      
+     
     </div>
+
+    </BrowserRouter>
+    
   )
 }
 

@@ -2,14 +2,17 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import { solStateChange } from '../store/slicer/InputStateSlice'
+import GenericSelector from '../myComponents/GenericSelector/GenerisSelector'
 
 export default function SolOptionSelector() {
   const dispatch = useDispatch()
   const roverName = useSelector((state) => state.InputState?.rover)
   const selectedSol = useSelector((state) => state.InputState?.sol)
   const data = useSelector((state) => state.roverData)
-  let solOptions= data[roverName]?.photos
-  
+
+  let solOptions= data[roverName]?.photos.map(sols=>sols.sol)
+  console.log(solOptions)
+
   
   
 
@@ -18,15 +21,17 @@ export default function SolOptionSelector() {
   }
 
   return (
+   
     (<div>
-      <label htmlFor='sol-select'>Select a sol:</label>
-      <select id='sol-select' value={selectedSol} onChange={handleSolChange}>
-        {data?(solOptions?.map((sols) => (
-          <option key={sols.earth_date} value={sols.sol}>
-            {sols.sol}
-          </option>
-        ))):<option>loading...</option>}
-      </select>
+       
+       
+       <div>
+      
+        {data?(<GenericSelector id={'sol-select'} options={solOptions} value={selectedSol} onChange={handleSolChange} title={'Sol'} />
+
+        ):<option>loading...</option>}
+      
+    </div>
     </div>)
   )
 }

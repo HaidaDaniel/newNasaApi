@@ -5,9 +5,11 @@
 }
 
 body {
-  background-color: rgb(43, 35, 163);
+  
+  background-color: #030303;
   margin: 0;
   font-family: 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Arimo','Iceberg',
     sans-serif;
+    color: #FAFAFA;
 }

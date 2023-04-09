@@ -2,6 +2,7 @@
 
 import { useSelector, useDispatch } from 'react-redux'
 import { cameraStateChange } from '../store/slicer/InputStateSlice'
+import GenericSelector from '../myComponents/GenericSelector/GenerisSelector'
 
 export default function CameraOptionSelector() {
   
@@ -12,27 +13,23 @@ export default function CameraOptionSelector() {
   let cameraOptions = data[roverName]?.photos[selectedSol]?.cameras
   const selectedCamera = useSelector((state) => state.InputState.rover.camera)
   
-  
+  console.log(cameraOptions)
   function handleCameraChange(event) {
     dispatch(cameraStateChange(event.target.value))
   }
-
+const Alloption =()=>{
+return<option selected={'selected'} value={''}> AllCameras</option>
+}
   return (
     <div>
-      <label htmlFor='camera-select'>Select a camera:</label>
-      <select
-        id='camera-select'
-        value={selectedCamera}
-        onChange={handleCameraChange}>
-          
-          {data &&(<option value={''}> AllCameras</option>)}
-        {data ?(  
-          cameraOptions?.map((cameraName) => (
-          <option key={cameraName} value={cameraName}>
-            {cameraName}
-          </option>
-        ))):(<option>Loadind... </option>)}
-      </select>
+      <div>
+     
+        {data ?( 
+       <GenericSelector id={'camera-select'} options={cameraOptions}value={selectedCamera} onChange={handleCameraChange} title={'Camera'} add={<Alloption/>} />
+      ):''}
+    </div>
+      
+      
     </div>
   )
 }

@@ -1,8 +1,10 @@
 .photo-container {
+  box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
-   
+    max-width: 1452px;
+    width: 100%;
+    margin: -15px;
+    padding-top: 72px;
     
   }

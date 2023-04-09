@@ -1,0 +1,38 @@
+.GalleryPage{
+    display: flex;
+    flex-direction: column;
+    max-width: 1640px;
+    width: 100%;
+    align-items: flex-start;
+}
+.textLineHeader{
+    width:100%;
+    border-bottom: 1px solid#FAFAFA;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    opacity: 0.4
+}
+.textLineMain{
+    max-width: 1362px;
+    width:100%;
+    border-bottom: 1px solid#FAFAFA;
+    opacity: 0.4
+    
+    
+   
+}
+
+.GPh2{
+    margin-bottom:20px ;
+
+   
+}
+.GPmain{
+    display: flex;
+    flex-direction: row;
+    max-width: 1640px;
+    width: 100%;
+    position: relative;
+}

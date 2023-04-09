@@ -1,0 +1,38 @@
+select {
+    margin: 10px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: none;
+    appearance: none;
+    width: 100%;
+    max-width: 228px;
+    background-color: #fff;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
+  }
+  
+  option {
+    font-size: 1em;
+  }
+  .selectorlabel{
+    
+    border-top: 1px solid #fafafa;
+    width: 100%;
+    max-width: 270px;
+    display: block;
+    font-family: 'Arimo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+  }
