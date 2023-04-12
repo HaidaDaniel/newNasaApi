@@ -1,16 +1,16 @@
 .Filters {
     box-sizing: border-box;
  position:sticky;
- max-width:248px ;
+ max-width:16% ;
  width: 100%;
- max-height: 636px;
+ max-height: 95%;
  height: 100%;
 
  border: 1px solid;
  border-color: aliceblue;
  float: right;
  top: 0px;
- padding: 10px;
+
 
  
 }
@@ -30,7 +30,8 @@ margin: 10px;
 
 }
 .textLineFilter{
-    max-width: 248px;;
+    padding-left: 5%;
+    max-width: 248px;
     width:100%;
     border-bottom: 1px solid#FAFAFA;
     margin-bottom: 72px;

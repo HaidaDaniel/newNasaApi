@@ -1,66 +1,69 @@
-.radio-group{
-    display: flex;
+.radio-group {
+  display: flex;
   flex-direction: column;
   font-family: 'Arimo';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 26px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 5%;
 
 }
+
 .radio-group input[type="radio"] {
-    /* скрыть оригинальную точку */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    /* задать квадратную форму */
-    border-radius: 0;
-    /* задать размер */
-    width: 1em;
-    height: 1em;
-    /* задать цвет границы */
-    border: 1px solid #ccc;
-    /* задать прозрачный цвет заливки */
-    background-color: transparent;
-    /* задать отступ между границей и центром точки */
-    margin: 0;
-    /* задать позицию */
-    position: relative;
-    /* задать отступ справа */
-    margin-right: 0.5em;
-  }
-  
-  .radio-group input[type="radio"]:checked::before {
-    /* добавить квадрат в качестве пункта */
-    content: "";
-    /* задать размеры */
-    width: 100%;
-    height: 100%;
-    /* задать цвет */
-    background-color: #ffffff;
-    /* задать позицию */
-    position: absolute;
-    /* задать расположение в центре */
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    /* задать размер */
-    width: 50%;
-    height: 50%;
-    /* скруглить углы */
-    border-radius: 0;
-  }
-.roverlabel{
-  display: block;
+  /* скрыть оригинальную точку */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* задать квадратную форму */
+  border-radius: 0;
+  /* задать размер */
+  width: 1em;
+  height: 1em;
+  /* задать цвет границы */
+  border: 1px solid #ccc;
+  /* задать прозрачный цвет заливки */
+  background-color: transparent;
+  /* задать отступ между границей и центром точки */
+  margin: 0;
+  /* задать позицию */
+  position: relative;
+  /* задать отступ справа */
+  margin-right: 0.5em;
+}
+
+.radio-group input[type="radio"]:checked::before {
+  /* добавить квадрат в качестве пункта */
+  content: "";
+  /* задать размеры */
+  width: 100%;
+  height: 100%;
+  /* задать цвет */
+  background-color: #ffffff;
+  /* задать позицию */
+  position: absolute;
+  /* задать расположение в центре */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  /* задать размер */
+  width: 50%;
+  height: 50%;
+  /* скруглить углы */
+  border-radius: 0;
+}
+
+.roverlabel {
+
   font-family: 'Arimo';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 26px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  margin-block-start: 5%;
+  margin-block-end: 5%;
+  margin-inline-start: 0%;
+  margin-inline-end: 0%;
 }

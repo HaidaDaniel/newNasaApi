@@ -2,7 +2,7 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = { rover: 'Curiosity', sol: 1, camera: '',page:'1' }
+const initialState = { rover: 'Curiosity', sol: 1, camera: '', page: '1' }
 
 
 export const InputStateSlice = createSlice({
@@ -24,12 +24,12 @@ export const InputStateSlice = createSlice({
       state.camera = action.payload
     },
     pageStateIncrement: (state) => {
-      state.page +=1
+      state.page += 1
     },
-    pageStateRefresh:(state) =>{
-      state.page=1
+    pageStateRefresh: (state) => {
+      state.page = 1
     }
   },
 })
-export const { roverStateChange, solStateChange, cameraStateChange,pageStateIncrement,pageStateRefresh } = InputStateSlice.actions;
+export const { roverStateChange, solStateChange, cameraStateChange, pageStateIncrement, pageStateRefresh } = InputStateSlice.actions;
 export default InputStateSlice.reducer

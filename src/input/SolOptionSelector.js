@@ -10,28 +10,28 @@ export default function SolOptionSelector() {
   const selectedSol = useSelector((state) => state.InputState?.sol)
   const data = useSelector((state) => state.roverData)
 
-  let solOptions= data[roverName]?.photos.map(sols=>sols.sol)
-  console.log(solOptions)
+  let solOptions = data[roverName]?.photos.map(sols => sols.sol)
 
-  
-  
+
+
+
 
   const handleSolChange = (event) => {
     dispatch(solStateChange(event.target.value))
   }
 
   return (
-   
-    (<div>
-       
-       
-       <div>
-      
-        {data?(<GenericSelector id={'sol-select'} options={solOptions} value={selectedSol} onChange={handleSolChange} title={'Sol'} />
 
-        ):<option>loading...</option>}
-      
-    </div>
+    (<div>
+
+
+      <div>
+
+        {data ? (<GenericSelector id={'sol-select'} options={solOptions} value={selectedSol} onChange={handleSolChange} title={'Sol'} />
+
+        ) : <option>loading...</option>}
+
+      </div>
     </div>)
   )
 }

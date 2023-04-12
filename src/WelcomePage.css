@@ -2,15 +2,16 @@
     background-image: url(/img/background.png);
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 1920px;
-    width: 100%;
+    max-width: 1780px;
+    width:90%;
+   
     
 
 
 
 }
 .WPMain{
-    width:50% ;
+ width: 50%;
 
 }
 .WPh1{
@@ -24,7 +25,7 @@ line-height: 95px;
 letter-spacing: 0px;
 text-align: left;
 
- max-width: 927px;
+ max-width: 835px;
 max-height: 285px;
 margin-bottom: 20px;
 }
@@ -32,3 +33,35 @@ margin-bottom: 20px;
     margin-bottom: 250px;
     margin-top: 40px;
 }
+.WPp{
+    max-width: 666px;
+    width: 100%;
+    font-family: 'Arimo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+}
+@media (max-width: 1440px) {
+    .WelcomePage {
+      background-image: url(/img/backgroundmobile.png);
+      background-size: cover;
+      
+    }
+    .WPMain{
+        width: 90%;
+        padding-top: 10%;
+        margin: 0 auto;
+       
+       }
+       .WPh1{
+        font-size: 80px;
+        text-align: center;
+       }
+       .WPp{
+        max-width: 100%;
+       }
+       .WPbutton{
+        margin: 0 auto;
+       }
+  }

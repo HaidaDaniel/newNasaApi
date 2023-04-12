@@ -15,7 +15,7 @@
     opacity: 0.4
 }
 .textLineMain{
-    max-width: 1362px;
+    max-width: 83%;
     width:100%;
     border-bottom: 1px solid#FAFAFA;
     opacity: 0.4
@@ -26,6 +26,7 @@
 
 .GPh2{
     margin-bottom:20px ;
+    margin-left: 20px;
 
    
 }

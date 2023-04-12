@@ -5,7 +5,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { pageStateIncrement, pageStateRefresh } from './store/slicer/InputStateSlice'
 import axios from 'axios'
 import MarsPhoto from './MarsPhoto'
+import MyModal from './MyModal'
 import'./MarsPhotos.css'
+
 
 const apiKey = 'DBr1rIGm8dj1LupgZNAPJbMN3Vw3acQ7q2SdKruY'
 
@@ -17,9 +19,34 @@ function MarsPhotos() {
   let camera = useSelector((state) => state.InputState.camera)
   let page = useSelector((state) => state.InputState.page)
 
-const [allphotos, setAllphotos] = useState(false)
 const [photos, setPhotos] = useState([])
+const [allphotos, setAllphotos] = useState(false)
 const [fetching,setFetching] = useState(false)
+const [modalIsOpen, setModalIsOpen] = useState(false);
+const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+
+const openModal = (index) => {
+  setCurrentImageIndex(index);
+ 
+  setModalIsOpen(true);
+};
+
+const closeModal = () => {
+  setModalIsOpen(false);
+};
+
+const handlePrevImage = () => {
+  if (currentImageIndex > 0) {
+    setCurrentImageIndex(currentImageIndex - 1);
+  }
+};
+
+const handleNextImage = () => {
+  if (currentImageIndex < photos.length - 1) {
+    setCurrentImageIndex(currentImageIndex + 1);
+  }
+};
 let cam
 if (camera === '') {
   cam = ''
@@ -30,16 +57,16 @@ if (camera === '') {
 let fetchUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}${cam}&page=${page}&api_key=${apiKey}`
 
  
-    console.log(photos)
+
 
   const scrollHandler =(e)=>{
     if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight)<100){
       setFetching(true)
       
-      console.log('scroll')
+      
     }
   }
-  
+
   
   useEffect(()=>{
     document.addEventListener('scroll',scrollHandler)
@@ -111,12 +138,32 @@ let fetchUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?s
 
     
   }, [rover, sol, camera])
-console.log(allphotos,fetching)
+  
+
   return (
     <div className='photo-container'>
-      {photos?.map((photo ,index) => (
-        <MarsPhoto key={index} photo={photo} />
-      ))}
+      {photos&&<div>{photos?.map((photo ,index) => (
+        <MarsPhoto key={index} photo={photo} onClick={() => openModal(index)} />
+        
+      ))}</div>}
+
+
+{photos.length > 1 && (
+        <MyModal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          handlePrevImage={handlePrevImage}
+          handleNextImage={handleNextImage}
+          currentImageIndex={currentImageIndex}
+          photos={photos}
+        />
+      )}
+      
+
+
+     
+     
+      
     </div>
   )
 }
