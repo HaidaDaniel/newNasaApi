@@ -6,16 +6,19 @@ import './Filters.css'
 
 
 function Filters() {
-    return (
-      <div className='Filters'>
-        <div className='filterTitleBlock'><h3 className='filterTitle'>Filters</h3><div class="textLineFilter"></div></div>
-        
-        <RoverOptionsRadio />
-        <SolOptionSelector />
-        <CameraOptionSelector />
-       
+  return (
+    <div className='filters'>
+      <div className='filterTitleBlock'>
+        <h3 className='filterTitle'>Filters</h3>
+        <div class="textLineFilter"></div>
       </div>
-    )
-  }
-  
-  export default Filters
+
+      <RoverOptionsRadio />
+      <SolOptionSelector />
+      <CameraOptionSelector />
+
+    </div>
+  )
+}
+
+export default Filters

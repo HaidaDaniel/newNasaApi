@@ -1,40 +1,41 @@
 select {
-    margin: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-   
-    box-shadow: none;
-    appearance: none;
-    width: 100%;
-    max-width: 228px;
-    background-color: #fff;
-  }
-  
-  select:focus {
-    outline: none;
-    border-color: #0077cc;
-    box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
-  }
-  
-  option {
-    font-size: 1rem;
-    margin-inline-start:  5%;
-  }
-  .selectorlabel{
-   
-    border-top: 1px solid #fafafa;
-    padding-left: 5%;
-    width: 100%;
-    max-width: 248px;
-    display: block;
-    font-family: 'Arimo';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 26px;
-margin-block-start: 5%;
-margin-block-end:  5%;
-margin-inline-start:  0%;
-margin-inline-end:  5%;
-    
-  }
+  margin: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+
+  box-shadow: none;
+  appearance: none;
+  width: 90%;
+
+  background-color: #fff;
+}
+
+select:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
+}
+
+option {
+  font-size: 1rem;
+  margin-inline-start: 5%;
+}
+
+.selectorlabel {
+
+
+  margin-left: 5%;
+  width: 100%;
+  max-width: 248px;
+  display: block;
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  margin-block-start: 5%;
+  margin-block-end: 5%;
+  margin-inline-start: 5%;
+  margin-inline-end: 5%;
+
+}

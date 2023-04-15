@@ -1,12 +1,14 @@
-.GalleryPage{
-    display: flex;
-    flex-direction: column;
-    max-width: 1640px;
-    width: 100%;
-    align-items: flex-start;
+.gallerypage {
+    margin: 0 auto;
+
+
+
+    width: 86%;
+
 }
-.textLineHeader{
-    width:100%;
+
+.textLineHeader {
+    width: 100%;
     border-bottom: 1px solid#FAFAFA;
     margin-left: auto;
     margin-right: auto;
@@ -14,26 +16,26 @@
     margin-bottom: 30px;
     opacity: 0.4
 }
-.textLineMain{
+
+.textLineMain {
     max-width: 83%;
-    width:100%;
+    width: 100%;
     border-bottom: 1px solid#FAFAFA;
     opacity: 0.4
-    
-    
-   
 }
 
-.GPh2{
-    margin-bottom:20px ;
+.GPh2 {
+    margin-bottom: 20px;
     margin-left: 20px;
+    font-size: 1.5rem;
 
-   
+
 }
-.GPmain{
+
+.main {
     display: flex;
     flex-direction: row;
-    max-width: 1640px;
+    justify-content: center;
     width: 100%;
     position: relative;
 }
