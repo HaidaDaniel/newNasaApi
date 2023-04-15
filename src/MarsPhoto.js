@@ -9,12 +9,17 @@ function MarsPhoto(props) {
 
 
   return (
-    <img className='img'
-      key={photo.id}
-      src={photo.img_src}
-      alt={`somePhotos`}
-      onClick={handleClick}
-    />
+    <div className='photo-container'>
+
+      <img className='img'
+        key={photo.id}
+        src={photo.img_src}
+        alt={`somePhotos`}
+        onClick={handleClick}
+      />
+
+    </div>
+
   )
 }
 
