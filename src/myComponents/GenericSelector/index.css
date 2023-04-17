@@ -26,13 +26,13 @@ option {
 
   margin-left: 5%;
   width: 100%;
-  max-width: 248px;
+
   display: block;
   font-family: 'Arimo';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-block-start: 5%;
   margin-block-end: 5%;
   margin-inline-start: 5%;
