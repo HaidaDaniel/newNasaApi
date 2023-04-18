@@ -86,4 +86,8 @@
         display: none;
 
     }
+
+    .filterTitleBlock {
+        display: none;
+    }
 }

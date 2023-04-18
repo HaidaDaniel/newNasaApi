@@ -14,3 +14,10 @@
   font-style: normal;
   font-weight: 600;
 }
+
+@media (max-width:800px) {
+
+  :root {
+    font-size: 26px;
+  }
+}
