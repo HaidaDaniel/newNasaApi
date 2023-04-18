@@ -2,7 +2,7 @@
 
 import { useSelector, useDispatch } from 'react-redux'
 import { cameraStateChange } from '../store/slicer/InputStateSlice'
-import GenericSelector from '../myComponents/GenericSelector/GenerisSelector'
+import GenericSelector from '../GenericComponents/GenericSelector/GenerisSelector'
 
 export default function CameraOptionSelector() {
 

@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 function MyModal({ isOpen, onRequestClose, handlePrevImage, handleNextImage, currentImageIndex, photos }) {
 
 
-  console.log(photos[currentImageIndex])
+
   return (
     <Modal className={'ReactModal'} isOpen={isOpen} onRequestClose={onRequestClose}>
       <div className='modal-block'>

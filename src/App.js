@@ -1,32 +1,33 @@
 /** @format */
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import React  from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react'
 import './App.css'
-import WelcomePage from './WelcomePage'
-import GalleryPage from './GalleryPage'
+import WelcomePage from './WelcomePage/WelcomePage'
+import GalleryPage from './GalleryPage/GalleryPage';
 import './fonts.css';
 
 
 
 
 function App() {
+
   return (
     <BrowserRouter>
 
-    <div className='App'>
+      <div className='App'>
 
-    <Routes>
+        <Routes>
 
-     <Route exact path="/" element={<WelcomePage/>} />
-     <Route path="/gallery" element={<GalleryPage/>} />
+          <Route exact path="/" element={<WelcomePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
 
-    </Routes>
-      
-     
-    </div>
+        </Routes>
+
+
+      </div>
 
     </BrowserRouter>
-    
+
   )
 }
 

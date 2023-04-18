@@ -43,6 +43,22 @@
     margin-bottom: 1rem;
 }
 
+.modalfilters {
+
+
+    background-color: black;
+    max-height: 95%;
+    height: 100%;
+    color: #FAFAFA;
+
+    border: 1px solid;
+    border-color: aliceblue;
+    margin: 0 auto;
+    top: 0px;
+
+    width: 90%;
+}
+
 @media (max-width:1440px) {
     .filters {
         max-width: 20%;
@@ -67,6 +83,7 @@
 @media (max-width:800px) {
 
     .filters {
-        max-width: 33%;
+        display: none;
+
     }
 }

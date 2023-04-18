@@ -2,7 +2,7 @@
 
 import { useDispatch, useSelector } from 'react-redux'
 import { solStateChange } from '../store/slicer/InputStateSlice'
-import GenericSelector from '../myComponents/GenericSelector/GenerisSelector'
+import GenericSelector from '../GenericComponents/GenericSelector/GenerisSelector'
 
 export default function SolOptionSelector() {
   const dispatch = useDispatch()
