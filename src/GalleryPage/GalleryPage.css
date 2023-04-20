@@ -25,9 +25,10 @@
 }
 
 .GPh2 {
-    margin-bottom: 20px;
-    margin-left: 20px;
-    font-size: 1.5rem;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    font-size: 1.2rem;
+    width: 10vw;
 
 
 }
@@ -45,7 +46,13 @@
     justify-content: space-between
 }
 
-.filters-button {}
+.filters-button {
+    width: 35%;
+    height: 1.5rem;
+    margin: auto 0;
+
+    border: 1px solid aliceblue;
+}
 
 @media (min-width:800px) {
 
