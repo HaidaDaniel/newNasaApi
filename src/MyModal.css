@@ -53,14 +53,12 @@
 /* стили для изображения */
 .modal-image {
   /* устанавливаем ширину и высоту изображения */
-  display: block;
-  max-width: 56rem;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-height: 56rem;
   height: 100%;
   object-fit: cover;
-
-  margin: 0 auto;
 }
 
 .modal-imgcontainer {
@@ -83,8 +81,31 @@
 }
 
 .modal-divimg {
-  max-height: 56rem;
-  height: 100%;
-  max-width: 56rem;
-  width: 100%;
+  width: 75%;
+
+  margin: 0.55%;
+  height: 0;
+  padding-bottom: 75%;
+
+  position: relative;
+}
+
+@media (max-width:800px) {
+
+  .modal-block {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .modal-imgtext {
+    width: 90%;
+  }
+
+  .modal-imgcontainer {
+    width: 95%;
+  }
+
+  .modal-close {
+    align-self: flex-end;
+  }
 }
