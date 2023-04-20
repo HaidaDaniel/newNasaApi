@@ -27,7 +27,7 @@ function GalleryPage() {
                 <div className="textLineHeader"></div>
                 <div className='titleblock'>
                     <div className='GPh2'><h2>Gallery</h2></div>
-                    <div className='filters-button'><Button onClick={handleOpenModal} ></Button></div>
+                    <div className='filters-button'><Button onClick={handleOpenModal} title={'Filters'} >Filters</Button></div>
                 </div>
 
 
