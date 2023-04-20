@@ -53,4 +53,12 @@
         display: none;
 
     }
+
+
+}
+
+@media (max-width:800px) {
+    .gallerypage {
+        width: 100%;
+    }
 }
