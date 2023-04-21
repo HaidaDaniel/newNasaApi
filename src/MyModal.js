@@ -25,7 +25,7 @@ function MyModal({ isOpen, onRequestClose, handlePrevImage, handleNextImage, cur
           </button>
         </div>
         <div className='modal-imgtext'>
-          <h3>Camera:{photos[currentImageIndex]['camera']['full_name']}</h3>
+          <h3>{photos[currentImageIndex]['camera']['full_name']}</h3>
           <p>Earth date:{photos[currentImageIndex]['earth_date']}</p>
           <p>Id:{photos[currentImageIndex]['id']}</p>
         </div>
