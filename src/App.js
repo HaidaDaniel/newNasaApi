@@ -4,7 +4,7 @@ import React from 'react'
 import './App.css'
 import WelcomePage from './WelcomePage/WelcomePage'
 import GalleryPage from './GalleryPage/GalleryPage';
-import './fonts.css';
+
 
 
 

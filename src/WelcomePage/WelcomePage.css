@@ -23,7 +23,9 @@
 
 .WPh1 {
     margin-top: 10%;
-    font-family: 'Iceberg, sans-serif';
+    font-family: 'Iceberg', cursive;
+
+
 
 
     font-size: 6rem;
@@ -42,20 +44,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+
     background: #E56444;
     color: #1e1e1e;
-    width: 20%;
+    font-family: 'Arimo', sans-serif;
+    width: 50%;
+    max-width: 153px;
     height: 3rem;
+    max-height: 46px;
     text-decoration: none;
     margin-top: 5%;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .WPp {
     max-width: 90%;
     align-self: start;
-    font-family: 'Arimo';
+    font-family: 'Arimo', sans-serif;
+
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
@@ -119,10 +125,12 @@
 
     .WPp {
         max-width: 100%;
+        text-align: center;
         font-size: 0.8rem;
+        margin-bottom: 1rem;
     }
 
-    .WPbutton {
+    .WPlink {
         margin: 0 auto;
     }
 

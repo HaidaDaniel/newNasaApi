@@ -1,15 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-  
+
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&display=swap');
+
 body {
-  
+
   background-color: #030303;
   margin: 0;
   font-family: 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Arimo','Iceberg',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Arimo', 'Iceberg',
     sans-serif;
-    color: #FAFAFA;
+  color: #FAFAFA;
+
 }

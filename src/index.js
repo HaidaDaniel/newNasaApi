@@ -4,9 +4,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { store } from './store/store'
 import { Provider } from 'react-redux'
-import './index.css'
 import App from './App'
 import Modal from 'react-modal';
+import './index.css'
+import './fonts.css';
+
 
 Modal.setAppElement('#root');
 
