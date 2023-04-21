@@ -50,6 +50,7 @@
     width: 35%;
     height: 1.5rem;
     margin: auto 0;
+    margin-right: 2%;
 
     border: 1px solid aliceblue;
 }
@@ -67,5 +68,16 @@
 @media (max-width:800px) {
     .gallerypage {
         width: 100%;
+    }
+
+    .textLineMain {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .textLineHeader {
+        max-width: 90%;
+        margin: 0 auto;
+        margin-top: 5%;
     }
 }

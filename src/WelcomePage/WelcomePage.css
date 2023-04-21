@@ -26,9 +26,9 @@
     font-family: 'Iceberg, sans-serif';
 
 
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 400;
-    line-height: 8rem;
+    line-height: 6rem;
     letter-spacing: 0px;
     text-align: left;
 
@@ -37,20 +37,59 @@
     margin-bottom: 5%;
 }
 
-.WPbutton {
-    margin-bottom: 10%;
-    margin-top: 10%;
+.WPlink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #E56444;
+    color: #1e1e1e;
+    width: 20%;
+    height: 3rem;
+    text-decoration: none;
+    margin-top: 5%;
     font-size: 2rem;
 }
 
 .WPp {
-    max-width: 100%;
-
+    max-width: 90%;
+    align-self: start;
     font-family: 'Arimo';
     font-style: normal;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 150%;
+}
+
+@media (max-width:1440px) {
+    .WPh1 {
+        margin-top: 8%;
+        font-size: 5rem;
+        text-align: center;
+        line-height: 5rem;
+    }
+
+
+}
+
+@media (max-width:1200px) {
+    .WPh1 {
+        margin-top: 7%;
+        font-size: 4rem;
+        text-align: center;
+        line-height: 4rem;
+    }
+}
+
+@media (max-width:1000px) {
+
+    .WPh1 {
+        margin-top: 6%;
+        font-size: 3rem;
+        text-align: center;
+        line-height: 3rem;
+    }
 }
 
 @media (max-width: 800px) {
@@ -72,7 +111,7 @@
     }
 
     .WPh1 {
-        margin-top: 10%;
+        margin-top: 5%;
         font-size: 2rem;
         text-align: center;
         line-height: 2rem;
