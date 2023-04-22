@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import MarsPhotos from '../MarsPhotos'
+import GalleryContainer from '../GalleryContainer/GalleryContainer'
 import Filters from '../Filters/Filters'
 import Button from '../GenericComponents/GenericButton/Button'
 
@@ -26,7 +26,7 @@ function GalleryPage() {
             <div className='header'>
                 <div className="textLineHeader"></div>
                 <div className='titleblock'>
-                    <div className='GPh2'><h2>Gallery</h2></div>
+                    <div className='gp_h2'><h2>Gallery</h2></div>
                     <div className='filters-button'><Button onClick={handleOpenModal} title={'Filters'} >Filters</Button></div>
                 </div>
 
@@ -39,7 +39,7 @@ function GalleryPage() {
             <div className='main'>
 
 
-                <MarsPhotos />
+                <GalleryContainer />
                 <Filters className='filters' />
 
             </div>

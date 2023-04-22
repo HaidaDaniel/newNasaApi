@@ -13,7 +13,7 @@
 
 .modal-block {
   display: flex;
-  justify-content: space-around;
+
   background-color: rgba(0, 0, 0, 0.8);
 
 }
@@ -89,6 +89,16 @@
   } */
 .modal-imgtext {
   width: 25%;
+  margin: auto;
+}
+
+.modal-imgtext h3 {
+  font-size: 1rem;
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  height: 35%;
+
 }
 
 .modal-divimg {
@@ -110,6 +120,7 @@
 
   .modal-imgtext {
     width: 90%;
+    height: 40%;
   }
 
   .modal-imgcontainer {

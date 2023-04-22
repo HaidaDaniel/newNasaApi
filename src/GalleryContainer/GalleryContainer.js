@@ -2,16 +2,16 @@
 
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { pageStateIncrement, pageStateRefresh } from './store/slicer/InputStateSlice'
 import axios from 'axios'
-import MarsPhoto from './MarsPhoto'
-import MyModal from './MyModal'
-import './MarsPhotos.css'
+import { pageStateIncrement, pageStateRefresh } from '../store/slicer/InputStateSlice'
+import MarsPhoto from '../MarsPhoto'
+import PhotoModal from '../PhotoModal'
+import './GalleryContainer.css'
 
 
 const apiKey = 'DBr1rIGm8dj1LupgZNAPJbMN3Vw3acQ7q2SdKruY'
 
-function MarsPhotos() {
+function GalleryContainer() {
   const dispatch = useDispatch()
 
   let rover = useSelector((state) => state.InputState.rover)
@@ -22,18 +22,18 @@ function MarsPhotos() {
   const [photos, setPhotos] = useState([])
   const [allphotos, setAllphotos] = useState(false)
   const [fetching, setFetching] = useState(false)
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalimgIsOpen, setModalImgIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 
   const openModal = (index) => {
     setCurrentImageIndex(index);
 
-    setModalIsOpen(true);
+    setModalImgIsOpen(true);
   };
 
   const closeModal = () => {
-    setModalIsOpen(false);
+    setModalImgIsOpen(false);
   };
 
   const handlePrevImage = () => {
@@ -149,8 +149,8 @@ function MarsPhotos() {
 
 
       {photos.length > 1 && (
-        <MyModal
-          isOpen={modalIsOpen}
+        <PhotoModal
+          isOpen={modalimgIsOpen}
           onRequestClose={closeModal}
           handlePrevImage={handlePrevImage}
           handleNextImage={handleNextImage}
@@ -168,4 +168,4 @@ function MarsPhotos() {
   )
 }
 
-export default MarsPhotos
+export default GalleryContainer

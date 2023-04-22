@@ -1,13 +1,13 @@
 import React from 'react';
 import Modal from 'react-modal';
-import './MyModal.css'
+import './PhotoModal.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CloseIcon from '@mui/icons-material/Close';
 
 
 
-function MyModal({ isOpen, onRequestClose, handlePrevImage, handleNextImage, currentImageIndex, photos }) {
+function PhotoModal({ isOpen, onRequestClose, handlePrevImage, handleNextImage, currentImageIndex, photos }) {
 
 
 
@@ -35,4 +35,4 @@ function MyModal({ isOpen, onRequestClose, handlePrevImage, handleNextImage, cur
   )
 }
 
-export default MyModal
+export default PhotoModal

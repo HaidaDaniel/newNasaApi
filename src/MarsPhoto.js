@@ -25,4 +25,3 @@ function MarsPhoto(props) {
 
 export default MarsPhoto
 
-// Mars Rover ${photo.name} - ${photo.camera.name}

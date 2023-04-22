@@ -1,4 +1,4 @@
-.WelcomePage {
+.welcomePage {
     background-image: url(/img/background.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,16 +12,16 @@
 
 }
 
-.WPMaincontainer {
+.wp_maincontainer {
     width: 50%;
 
 }
 
-.WPmain {
+.wp_main {
     padding-left: 15%;
 }
 
-.WPh1 {
+.wp_h1 {
     margin-top: 10%;
     font-family: 'Iceberg', cursive;
 
@@ -39,7 +39,7 @@
     margin-bottom: 5%;
 }
 
-.WPlink {
+.wp_link {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +57,7 @@
     font-size: 1rem;
 }
 
-.WPp {
+.wp_p {
     max-width: 90%;
     align-self: start;
     font-family: 'Arimo', sans-serif;
@@ -69,7 +69,7 @@
 }
 
 @media (max-width:1440px) {
-    .WPh1 {
+    .wp_h1 {
         margin-top: 8%;
         font-size: 5rem;
         text-align: center;
@@ -80,7 +80,7 @@
 }
 
 @media (max-width:1200px) {
-    .WPh1 {
+    .wp_h1 {
         margin-top: 7%;
         font-size: 4rem;
         text-align: center;
@@ -90,7 +90,7 @@
 
 @media (max-width:1000px) {
 
-    .WPh1 {
+    .wp_h1 {
         margin-top: 6%;
         font-size: 3rem;
         text-align: center;
@@ -99,13 +99,13 @@
 }
 
 @media (max-width: 800px) {
-    .WelcomePage {
+    .welcomePage {
         background-image: url(/img/backgroundmobile.png);
         background-size: cover;
 
     }
 
-    .WPmain {
+    .wp_main {
         display: flex;
         flex-direction: column;
         width: 90%;
@@ -116,25 +116,25 @@
 
     }
 
-    .WPh1 {
+    .wp_h1 {
         margin-top: 5%;
         font-size: 2rem;
         text-align: center;
         line-height: 2rem;
     }
 
-    .WPp {
+    .wp_p {
         max-width: 100%;
         text-align: center;
         font-size: 0.8rem;
         margin-bottom: 1rem;
     }
 
-    .WPlink {
+    .wp_link {
         margin: 0 auto;
     }
 
-    .WPMaincontainer {
+    .wp_maincontainer {
         width: 100%;
 
     }
