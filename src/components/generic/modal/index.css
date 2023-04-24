@@ -1,0 +1,64 @@
+.custom-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    background: #08080800;
+    overflow: auto;
+    outline: none;
+    padding: 1rem;
+    z-index: 9999;
+}
+
+.ReactModal__Content {
+    width: 95%;
+    background-color: black;
+    height: 95%;
+    margin: auto auto;
+    position: relative;
+}
+
+
+.modal {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 93%;
+    height: 90%;
+}
+
+.modal-header {
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;
+    border: 1px solid #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.modal-close {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #f44336;
+}
+
+.modal-body {
+    line-height: 1.5;
+    margin: 0;
+    height: 90%;
+}

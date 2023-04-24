@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import App from './App'
 import Modal from 'react-modal';
 import './index.css'
-import './fonts.css';
+
 
 
 Modal.setAppElement('#root');

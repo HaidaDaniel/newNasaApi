@@ -1,0 +1,53 @@
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 5%;
+}
+
+.radio-group input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    margin: 0;
+    position: relative;
+    margin-right: 0.5em;
+}
+
+.radio-group input[type="radio"]:checked::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 0;
+}
+
+.roverlabel {
+
+    font-family: 'Arimo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 26px;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+}

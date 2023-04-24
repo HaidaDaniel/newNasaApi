@@ -1,0 +1,26 @@
+.gallery-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.textLineMain {
+  width: 99%;
+  border-bottom: 1px solid#FAFAFA;
+  opacity: 0.4;
+}
+
+@media (max-width:800px) {
+  .gallery-container {
+    justify-content: center;
+  }
+
+  .textLineMain {
+    max-width: 98%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+  }
+
+}
