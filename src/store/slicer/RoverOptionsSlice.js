@@ -3,6 +3,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
+const API_KEY = process.env.REACT_APP_API_KEY
+
 export const fetchRoverOptions = createAsyncThunk(
   'RoverOptions/fetchRoverOptions',
   async () => {
@@ -10,21 +12,19 @@ export const fetchRoverOptions = createAsyncThunk(
       'https://api.nasa.gov/mars-photos/api/v1/rovers',
       {
         params: {
-          api_key: 'DBr1rIGm8dj1LupgZNAPJbMN3Vw3acQ7q2SdKruY',
+          api_key: API_KEY,
         },
       }
     )
 
     return response.data.rovers.map((rover) => rover.name)
-    
   }
 )
-
 
 export const RoverOptionsSlice = createSlice({
   name: 'RoverOptions',
   initialState: {
-    roverOptions: ['Curiosity','Spirit','Opportunity','Perseverance'],
+    roverOptions: ['Curiosity', 'Spirit', 'Opportunity', 'Perseverance'],
     status: 'idle',
     error: null,
   },

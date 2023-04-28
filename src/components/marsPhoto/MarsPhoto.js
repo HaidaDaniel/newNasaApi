@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react'
 import './MarsPhoto.css'
 
@@ -7,21 +9,17 @@ function MarsPhoto(props) {
     onClick(photo.id)
   }
 
-
   return (
     <div className='photo-container'>
-
-      <img className='img'
+      <img
+        className='img'
         key={photo.id}
         src={photo.img_src}
         alt={`somePhotos`}
         onClick={handleClick}
       />
-
     </div>
-
   )
 }
 
 export default MarsPhoto
-

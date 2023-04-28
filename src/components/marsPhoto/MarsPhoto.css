@@ -1,3 +1,5 @@
+/** @format */
+
 .photo-container {
   width: 18.8%;
   margin: 0.55%;
@@ -5,7 +7,6 @@
   padding-bottom: 14.5%;
   position: relative;
 }
-
 
 .img {
   position: absolute;
@@ -17,17 +18,15 @@
   border: 1px solid aliceblue;
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
   .photo-container {
     width: 24%;
-    margin: 0.50%;
+    margin: 0.5%;
     padding-bottom: 19%;
   }
-
-
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
   .photo-container {
     width: 32.4%;
     margin: 0.45%;
@@ -35,8 +34,7 @@
   }
 }
 
-@media (max-width:1000px) {
-
+@media (max-width: 1000px) {
   .photo-container {
     width: 32.4%;
     margin: 0.45%;
@@ -44,8 +42,7 @@
   }
 }
 
-@media (max-width:800px) {
-
+@media (max-width: 800px) {
   .photo-container {
     width: 48%;
     margin: 0.45%;

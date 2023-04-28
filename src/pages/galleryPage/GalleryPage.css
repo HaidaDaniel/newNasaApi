@@ -1,3 +1,5 @@
+/** @format */
+
 .gallerypage {
     margin: 0 auto;
     width: 86%;
@@ -10,7 +12,7 @@
     margin-right: auto;
     margin-top: 70px;
     margin-bottom: 30px;
-    opacity: 0.4
+    opacity: 0.4;
 }
 
 .gp_h2 {
@@ -18,8 +20,6 @@
     margin-left: 1%;
     font-size: 1.2rem;
     width: 10vw;
-
-
 }
 
 .main {
@@ -32,7 +32,7 @@
 
 .titleblock {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .filters-button {
@@ -44,17 +44,13 @@
     border: 1px solid aliceblue;
 }
 
-@media (min-width:800px) {
-
+@media (min-width: 800px) {
     .filters-button {
         display: none;
-
     }
-
-
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
     .gallerypage {
         width: 100%;
     }

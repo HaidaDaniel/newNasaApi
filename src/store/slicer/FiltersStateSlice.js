@@ -4,7 +4,6 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = { rover: 'Curiosity', sol: 1, camera: '', page: '1' }
 
-
 export const FiltersStateSlice = createSlice({
   name: 'FiltersState',
   initialState,
@@ -28,8 +27,14 @@ export const FiltersStateSlice = createSlice({
     },
     pageStateRefresh: (state) => {
       state.page = 1
-    }
+    },
   },
 })
-export const { roverStateChange, solStateChange, cameraStateChange, pageStateIncrement, pageStateRefresh } = FiltersStateSlice.actions;
+export const {
+  roverStateChange,
+  solStateChange,
+  cameraStateChange,
+  pageStateIncrement,
+  pageStateRefresh,
+} = FiltersStateSlice.actions
 export default FiltersStateSlice.reducer

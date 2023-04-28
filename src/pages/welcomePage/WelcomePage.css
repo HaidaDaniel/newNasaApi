@@ -1,3 +1,5 @@
+/** @format */
+
 .welcomepage {
     background-image: url(/img/background.png);
     background-size: cover;
@@ -5,16 +7,10 @@
     background-position: right center;
     height: 100vh;
     width: 100vw;
-
-
-
-
-
 }
 
 .wp_maincontainer {
     width: 50%;
-
 }
 
 .wp_main {
@@ -24,9 +20,6 @@
 .wp_h1 {
     margin-top: 10%;
     font-family: 'Iceberg', cursive;
-
-
-
 
     font-size: 6rem;
     font-weight: 400;
@@ -45,7 +38,7 @@
     justify-content: center;
     align-items: center;
 
-    background: #E56444;
+    background: #e56444;
     color: #1e1e1e;
     font-family: 'Arimo', sans-serif;
     width: 50%;
@@ -68,18 +61,16 @@
     line-height: 150%;
 }
 
-@media (max-width:1440px) {
+@media (max-width: 1440px) {
     .wp_h1 {
         margin-top: 8%;
         font-size: 5rem;
         text-align: center;
         line-height: 5rem;
     }
-
-
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
     .wp_h1 {
         margin-top: 7%;
         font-size: 4rem;
@@ -88,8 +79,7 @@
     }
 }
 
-@media (max-width:1000px) {
-
+@media (max-width: 1000px) {
     .wp_h1 {
         margin-top: 6%;
         font-size: 3rem;
@@ -102,7 +92,6 @@
     .welcomePage {
         background-image: url(/img/backgroundmobile.png);
         background-size: cover;
-
     }
 
     .wp_main {
@@ -113,7 +102,6 @@
         margin: 0 auto;
         padding-left: 3%;
         padding-right: 3%;
-
     }
 
     .wp_h1 {
@@ -136,6 +124,5 @@
 
     .wp_maincontainer {
         width: 100%;
-
     }
 }

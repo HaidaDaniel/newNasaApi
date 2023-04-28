@@ -9,7 +9,7 @@ import PhotoModalContent from '../photoModalContent/PhotoModalContent'
 import './GalleryContainer.css'
 
 
-const apiKey = 'DBr1rIGm8dj1LupgZNAPJbMN3Vw3acQ7q2SdKruY'
+const apiKey = process.env.REACT_APP_API_KEY
 
 function GalleryContainer() {
   const dispatch = useDispatch()
