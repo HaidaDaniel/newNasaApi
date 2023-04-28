@@ -12,15 +12,15 @@ function GenericModal(props) {
         <Modal
             isOpen={isOpen}
             onRequestClose={onRequestClose}
-            className='custom-modal'>
-            <div className='modal'>
-                <div className='modal-header'>
-                    <h2 className='modal-title'>{title}</h2>
-                    <button className='modal-close' onClick={onRequestClose}>
+            className='custom-gmodal'>
+            <div className='gmodal'>
+                <div className='gmodal-header'>
+                    <h2 className='gmodal-title'>{title}</h2>
+                    <button className='gmodal-close' onClick={onRequestClose}>
                         <CloseIcon />
                     </button>
                 </div>
-                <div className='modal-body'>{children}</div>
+                <div className='gmodal-body'>{children}</div>
             </div>
         </Modal>
     )

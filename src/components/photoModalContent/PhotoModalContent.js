@@ -23,7 +23,7 @@ function PhotoModalContent({
       <div className='modal-block'>
         <div className='modal-imgcontainer'>
           <button className='left' onClick={handlePrevImage}>
-            <ArrowBackIosIcon />
+            <ArrowBackIosIcon fontSize="large" />
           </button>
           <div className='modal-divimg'>
             <img
@@ -33,7 +33,7 @@ function PhotoModalContent({
             />
           </div>
           <button className='right' onClick={handleNextImage}>
-            <ArrowForwardIosIcon />
+            <ArrowForwardIosIcon fontSize="large" />
           </button>
         </div>
         <div className='modal-imgtext'>
@@ -42,7 +42,7 @@ function PhotoModalContent({
           <p>Id:{photos[currentImageIndex]['id']}</p>
         </div>
         <button className='modal-close' onClick={onRequestClose}>
-          <CloseIcon />
+          <CloseIcon fontSize="large" />
         </button>
       </div>
     </Modal>

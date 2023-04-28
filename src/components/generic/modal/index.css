@@ -1,6 +1,6 @@
 /** @format */
 
-.custom-modal {
+.custom-gmodal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,14 +15,12 @@
 }
 
 .ReactModal__Content {
-    width: 95%;
     background-color: black;
-    height: 95%;
     margin: auto auto;
     position: relative;
 }
 
-.modal {
+.gmodal {
     position: fixed;
     top: 10%;
     left: 0;
@@ -30,7 +28,7 @@
     height: 90%;
 }
 
-.modal-header {
+.gmodal-header {
     width: 80%;
     height: 10%;
     margin: 0 auto;
@@ -40,13 +38,13 @@
     align-items: center;
 }
 
-.modal-title {
+.gmodal-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
 }
 
-.modal-close {
+.gmodal-close {
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
@@ -54,11 +52,11 @@
     cursor: pointer;
 }
 
-.modal-close:hover {
+.gmodal-close:hover {
     color: #f44336;
 }
 
-.modal-body {
+.gmodal-body {
     line-height: 1.5;
     margin: 0;
     height: 90%;
