@@ -50,7 +50,6 @@ function PhotoModalContent({
         </div>
         <div className='modal-imgtext'>
           <p>{photos[currentImageIndex]['camera']['full_name']}</p>
-          <br />
           <p>Earth date:{photos[currentImageIndex]['earth_date']}</p>
           <p>Id:{photos[currentImageIndex]['id']}</p>
         </div>
