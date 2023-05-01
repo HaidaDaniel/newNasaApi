@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Modal from 'react-modal'
+import { useMediaQuery } from 'react-responsive';
 import './PhotoModalContent.css'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
@@ -15,23 +16,30 @@ function PhotoModalContent({
   currentImageIndex,
   photos,
 }) {
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
   return (
     <Modal
       className={'photomodalcontent'}
       isOpen={isOpen}
-      onRequestClose={onRequestClose}>
+      onRequestClose={onRequestClose}
+      overlayClassName={'modal-overlay'}
+      >
       <div className='modal-block'>
-        <div className='modal-imgcontainer'>
-          <button className='left' onClick={handlePrevImage}>
+        <div className='modal-imgslider'>
+        {!isSmallScreen && <button className='left' onClick={handlePrevImage}>
             <ArrowBackIosIcon fontSize="large" />
-          </button>
-          <div className='modal-divimg'>
+          </button>}
+          
+          <div className='modal-sliderimg'> 
             <img
               className='modal-image'
               src={photos[currentImageIndex]['img_src']}
               alt={photos[currentImageIndex]}
             />
           </div>
+          {isSmallScreen && <button className='left' onClick={handlePrevImage}>
+            <ArrowBackIosIcon fontSize="large" />
+          </button>}
           <button className='right' onClick={handleNextImage}>
             <ArrowForwardIosIcon fontSize="large" />
           </button>
