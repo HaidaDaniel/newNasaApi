@@ -38,11 +38,15 @@ function PhotoModalContent({
             />
           </div>
           {isSmallScreen && <button className='left' onClick={handlePrevImage}>
-            <ArrowBackIosIcon fontSize="large" />
+            <ArrowBackIosIcon fontSize="medium" />
           </button>}
-          <button className='right' onClick={handleNextImage}>
+          {isSmallScreen &&  <button className='right' onClick={handleNextImage}>
+            <ArrowForwardIosIcon fontSize="medium" />
+          </button>}
+          {!isSmallScreen && <button className='right' onClick={handleNextImage}>
             <ArrowForwardIosIcon fontSize="large" />
-          </button>
+          </button>}
+          
         </div>
         <div className='modal-imgtext'>
           <p>{photos[currentImageIndex]['camera']['full_name']}</p>
