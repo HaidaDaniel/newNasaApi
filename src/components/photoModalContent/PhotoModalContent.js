@@ -45,7 +45,8 @@ function PhotoModalContent({
           </button>
         </div>
         <div className='modal-imgtext'>
-          <h3>{photos[currentImageIndex]['camera']['full_name']}</h3>
+          <p>{photos[currentImageIndex]['camera']['full_name']}</p>
+          <br />
           <p>Earth date:{photos[currentImageIndex]['earth_date']}</p>
           <p>Id:{photos[currentImageIndex]['id']}</p>
         </div>
