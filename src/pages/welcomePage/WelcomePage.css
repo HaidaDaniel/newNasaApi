@@ -105,21 +105,22 @@
     }
 
     .wp_h1 {
-        
-        font-size: 1.75rem;
+        margin: 0;
+        font-size: 1.5rem;
         text-align: center;
-        line-height: 2rem;
+        line-height: 1.6rem;
     }
 
     .wp_p {
         max-width: 100%;
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         margin-bottom: 1rem;
     }
 
     .wp_link {
         margin: 0 auto;
+        border: 2px solid black;
     }
 
     .wp_maincontainer {
