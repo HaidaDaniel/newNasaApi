@@ -7,6 +7,7 @@ import { pageStateIncrement, pageStateRefresh } from '../../store/slicer/Filters
 import MarsPhoto from '../marsPhoto/MarsPhoto'
 import PhotoModalContent from '../photoModalContent/PhotoModalContent'
 import './GalleryContainer.css'
+import LoadingIndicator from '../circularProgress/CircularProgress'
 
 
 const apiKey = process.env.REACT_APP_API_KEY
@@ -132,10 +133,10 @@ function GalleryContainer() {
   return (
     <div className='gallery-container'>
       <div className="textLineMain"></div>
-      {photos && <>{photos?.map((photo, index) => (
+      {photos.length > 1 ? <>{photos?.map((photo, index) => (
         <MarsPhoto key={index} photo={photo} onClick={() => openModal(index)} />
 
-      ))}</>}
+      ))}</>:<LoadingIndicator></LoadingIndicator>}
       {photos.length > 1 && (
         <PhotoModalContent
           isOpen={modalimgIsOpen}
